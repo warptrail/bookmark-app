@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #00c044;
+}
+
+body {
+  background-color: #1d1f31;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* MAIN */
+
+/* Bookmark Controls */
+.bookmark-controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+select,
+button,
+input,
+textarea {
+  font-size: 16px;
+  background-color: #23253c;
+  border: 1px solid darkorange;
+  border-radius: 10px;
+  background-color: #2f2546;
+  padding: 10px;
+}
+
+.add-bm-btn {
+  margin-top: auto;
+}
+
+.filter-by-rating {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.display-notification {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Add bookmark Form */
+
+.add-bm-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.add-bm-form > * {
+  margin: 13px 0;
+}
+
+.add-bm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.add-bm-form label {
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.add-bm-form input[type='text'],
+.add-bm-form select,
+textarea {
+  margin: auto;
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  font-size: 16px;
+}
+
+textarea {
+  color: #00c044;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-btns > * {
+  margin: 10px 0;
+}
+
+#backToList {
+  font-size: 16px;
+}
+
+/* The Bookmark List */
+ul {
+  margin-top: 15px;
+}
+
+li {
+  background-color: #23203f;
+  border: 1px solid yellow;
+  margin: 10px;
+
+  padding: 10px;
+  list-style: none;
+  border-radius: 12px;
+}
+
+.bookmark-bubble {
+  border-radius: 10px;
+}
+
+main ul li .bookmark-bubble > * {
+  margin: 4px;
+}
+
+li h2 {
+  font-size: 16px;
+}
+
+/* Expanded View */
+
+.bookmark-expand {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.bookmark-expand > * {
+  margin-top: 10px;
+}
+
+.bookmark-link {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #3f203c;
+}
+.bookmark-expand a {
+  text-decoration: none;
+  color: #6775ff;
+  font-weight: 800;
+}
+
+.bookmark-expand p {
+  color: #79fae7;
+  margin-top: 15px;
+}
+
+.bookmark-expand button {
+  margin-left: auto;
+  width: 20%;
+  padding: 3px;
+  color: #a40000;
+  border: 1px dotted #a40000;
+}
+
+.hidden {
+  display: none;
+}
+
+/* This applies from 600px onwards */
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+  }
+
+  .logo {
+    max-width: 100px;
+    flex-basis: 200px;
+    margin: 10px 0 0 10px;
+  }
+
+  h1 {
+    margin: auto 30px;
+  }
+
+  .bookmark-controls {
+    display: flex;
+    margin: 0 10px 0 10px;
+    justify-content: initial;
+  }
+
+  .bookmark-controls > * {
+    margin: 0 10px;
+  }
+
+  .add-bm-btn {
+    margin-right: 10px;
+    margin-top: auto;
+  }
+
+  .bookmark-controls label {
+    margin: 0;
+  }
+
+  .bookmark-controls select {
+    margin: 0;
+  }
+
+  .display-notification {
+    margin: 20px 0 10px 10px;
+    text-align: left;
+  }
+
+  li {
+    width: 500px;
+  }
+
+  .bookmark-bubble:hover {
+    background-color: #3b417e;
+    padding: 4px;
+  }
+
+  .add-bm {
+    flex-direction: row;
+    margin-left: 10px;
+  }
+
+  .add-bm input[type='text'] {
+    margin: 0 10px 0 0;
+  }
+
+  #rating {
+    width: 200px;
+    margin: 0;
+    margin-left: 40px;
+  }
+  textarea {
+    width: 80%;
+    margin: 0;
+  }
+
+  .form-btns > * {
+    margin: 10px 15px;
+  }
+}
